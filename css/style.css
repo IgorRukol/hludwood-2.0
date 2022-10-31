@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+section,
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  max-width: 1440px;
+  flex-shrink: 1;
+}
+
+span {
+  padding: 0 15px;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #292f36;
+  font-family: "DM Serif Display", serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 80px;
+  letter-spacing: 0.22px;
+}
+
+.wrapper {
+  align-items: center;
+  align-content: center;
+  max-width: 1440px;
+}
+
+.header {
+  padding: 26px 120px 18px 120px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 1;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.22px;
+  color: #4d5053;
+}
+
+.background {
+  position: relative;
+  text-align: center;
+}
+
+.background__content {
+  position: absolute;
+  top: 188px;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 600px;
+  height: 385px;
+}
+
+.content__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 207px;
+  padding: 20px 0px;
+  color: white;
+  background: #292f36;
+  border: 2px solid #292f36;
+  border-radius: 18px;
+  letter-spacing: 0.72px;
+}
+
+.descgrid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
