@@ -89,15 +89,21 @@ h6 {
 
 body {
   margin: auto;
-  display: flex;
   max-width: 1440px;
-  flex-shrink: 1;
-  min-width: 350px;
 }
 
+@media (max-width: 767px) {
+  .body {
+    max-width: none;
+  }
+}
 span {
   font-family: "Jost", sans-serif;
   font-size: 18px;
+}
+
+.backimg {
+  width: 100%;
 }
 
 .span-header {
@@ -106,24 +112,21 @@ span {
 
 .span-header-gold {
   padding: 0 20px;
-  color: #CDA274;
+  color: #cda274;
 }
 
 .span-strelki {
   font-size: 18px;
-  line-height: 27px;
+  line-height: 17%;
   letter-spacing: 0.72px;
 }
 
 h2 {
-  font-size: 50px;
-  line-height: 65px;
-  letter-spacing: 0.22px;
+  font-size: calc(20px + 2.5vw);
 }
 
 h3 {
-  font-size: 45px;
-  line-height: 58px;
+  font-size: calc(15px + 2.5vw);
   text-align: center;
   letter-spacing: 0.22px;
 }
@@ -140,7 +143,7 @@ h6 {
 
 h1 {
   margin: 0;
-  font-size: 80px;
+  font-size: calc(20px + 4.5833333333vw);
   letter-spacing: 0.22px;
 }
 
@@ -166,27 +169,28 @@ h1 {
 
 p {
   font-family: "Jost", sans-serif;
+  font-size: calc(12px + 0.6666666667vw);
   font-size: 18px;
   margin: 30px 0;
   font-size: 22px;
-  line-height: 33px;
   letter-spacing: 0.22px;
   color: #4d5053;
 }
 
 .background {
+  width: 100%;
   position: relative;
   text-align: center;
 }
 
 .background__content {
   position: absolute;
-  top: 188px;
+  top: 10%;
   left: 120px;
   display: flex;
   flex-direction: column;
   text-align: left;
-  width: 600px;
+  width: 50%;
   height: 385px;
 }
 
@@ -206,29 +210,29 @@ p {
 
 .descgrid {
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 140px;
+  display: flex;
+  flex: 0 1 33, 33333%;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 0 120px;
 }
 
 .desccol {
-  margin-top: 50px;
+  margin: 50px;
 }
 
 .spandesc {
   font-family: "DM Serif Display";
   font-size: 25px;
   letter-spacing: 0.22px;
-  color: #292F36;
+  color: #292f36;
 }
 
 .callblock {
-  width: 1200px;
+  width: 90%;
   margin: 50px 120px 0 120px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .phone {
@@ -236,6 +240,10 @@ p {
   flex-direction: row;
   align-items: center;
   text-align: center;
+}
+
+.callblock__right {
+  width: 50%;
 }
 
 .callblock__left {
@@ -246,31 +254,27 @@ p {
 }
 
 .peoplecontainer {
-  margin: 120px 120px;
+  margin: 120px 10%;
   padding: 0 22px;
   align-items: center;
   position: relative;
-  background: #F4F0EC;
+  background: #f4f0ec;
   border-radius: 70px;
-  height: 675px;
+  min-height: 675px;
 }
 
 .peoplegrid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  justify-content: stretch;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .people {
-  padding: 50px 40px;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  justify-content: center;
-  width: auto;
-  min-height: 354px;
-  background: #FFFFFF;
+  margin: 3% auto;
+  width: 33, 3333%;
+  height: 330px;
+  background: #ffffff;
   border-radius: 30px;
 }
 
@@ -288,7 +292,8 @@ p {
   padding-bottom: 30px;
 }
 
-.peopleright__p, .peopleright__span {
+.peopleright__p,
+.peopleright__span {
   margin: 0 0 0 20px;
 }
 
@@ -299,18 +304,19 @@ p {
   font-size: 24px;
   line-height: 38px;
   letter-spacing: 0.22px;
-  color: #292F36;
+  color: #292f36;
 }
 
 h3 {
-  padding: 100px 200px 40px 200px;
+  padding: 100px 16.6% 40px 16.6%;
 }
 
 .company {
   margin: auto;
-  max-width: 1200px;
+  max-width: 90%;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .recentprojects__h3 {
@@ -318,7 +324,7 @@ h3 {
 }
 
 .recentprojects__p {
-  width: 800px;
+  width: 66.6666%;
   margin: auto;
   text-align: center;
 }
@@ -331,29 +337,28 @@ h3 {
 .projectscontainer {
   gap: 60px 20px;
   margin: 75px auto;
-  width: 1200px;
+  width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 50%);
 }
 
 .gold {
+  font-size: calc(35px + 4.1666666667vw);
   font-family: "DM Serif Display";
   font-style: normal;
   font-weight: 400;
-  font-size: 85px;
   line-height: 128px;
   letter-spacing: 1.7px;
-  color: #CDA274;
+  color: #cda274;
 }
 
 .quantity__item {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 288px;
-  height: 195px;
-  border-right: 1px solid #CDA274;
+  width: 25%;
+  height: 6, 1%;
+  border-right: 1px solid #cda274;
 }
 
 .quantity__item:last-child {
@@ -361,10 +366,10 @@ h3 {
 }
 
 .quantity {
-  padding: 150px 150px;
-  background: #F4F0EC;
+  padding: 8% 8%;
+  background: #f4f0ec;
   border-radius: 0px;
-  width: 1440px;
+  width: 90%;
   height: 475px;
   display: flex;
   flex-direction: row;
@@ -372,13 +377,14 @@ h3 {
 }
 
 .pgold {
+  font-size: calc(12px + 0.6666666667vw);
   text-align: center;
   justify-content: center;
 }
 
 .blog__item {
   position: relative;
-  border: 1px solid #E7E7E7;
+  border: 1px solid #e7e7e7;
   border-radius: 62px;
   padding: 21px;
   display: flex;
@@ -390,10 +396,9 @@ h3 {
 .blogcontainer {
   gap: 60px 20px;
   margin: 75px auto 100px;
-  width: 1200px;
+  width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 33.3333%);
 }
 
 .textonimg {
@@ -402,7 +407,7 @@ h3 {
   min-height: 44px;
   display: flex;
   flex-grow: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 8px 8px 8px 0px;
   position: absolute;
   bottom: 180px;
@@ -413,9 +418,9 @@ h3 {
   padding: 70px;
   text-align: center;
   margin: auto;
-  background: #292F36;
+  background: #292f36;
   border-radius: 70px;
-  width: 1200px;
+  width: 90%;
   height: 414px;
 }
 
@@ -427,15 +432,15 @@ h3 {
   line-height: 75px;
   text-align: center;
   letter-spacing: 0.22px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .darkblock > p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .darkblock__button {
-  background: #CDA274;
+  background: #cda274;
   display: flex;
   margin: auto;
   align-items: center;
@@ -449,16 +454,16 @@ h3 {
 }
 
 .footer {
-  width: 1440px;
+  width: 100%;
   margin-top: 50px;
   padding: 50px;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid #e5e5e5;
   display: flex;
   justify-content: space-between;
 }
 
 .copyright {
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid #e5e5e5;
   padding-top: 10px;
   text-align: center;
   padding-bottom: 10px;
