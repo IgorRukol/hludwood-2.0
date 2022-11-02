@@ -92,6 +92,7 @@ body {
   display: flex;
   max-width: 1440px;
   flex-shrink: 1;
+  min-width: 350px;
 }
 
 span {
@@ -101,6 +102,11 @@ span {
 
 .span-header {
   padding: 0 20px;
+}
+
+.span-header-gold {
+  padding: 0 20px;
+  color: #CDA274;
 }
 
 .span-strelki {
@@ -159,6 +165,8 @@ h1 {
 }
 
 p {
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
   margin: 30px 0;
   font-size: 22px;
   line-height: 33px;
@@ -199,7 +207,7 @@ p {
 .descgrid {
   text-align: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-gap: 140px;
   justify-content: center;
   padding: 0 120px;
@@ -210,17 +218,15 @@ p {
 }
 
 .spandesc {
+  font-family: "DM Serif Display";
   font-size: 25px;
-  line-height: 53px;
-  text-align: center;
   letter-spacing: 0.22px;
   color: #292F36;
 }
 
 .callblock {
   width: 1200px;
-  margin: 0 120px;
-  padding: 50px 0;
+  margin: 50px 120px 0 120px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -239,22 +245,29 @@ p {
   padding-right: 100px;
 }
 
-.peoplegrid {
-  padding: 0 50px;
+.peoplecontainer {
+  margin: 120px 120px;
+  padding: 0 22px;
   align-items: center;
   position: relative;
-  margin: 140px 120px;
   background: #F4F0EC;
   border-radius: 70px;
+  height: 675px;
+}
+
+.peoplegrid {
   display: grid;
   gap: 18px;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-between;
-  height: 675px;
 }
 
 .people {
-  padding: 25px;
+  padding: 50px 40px;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  justify-content: center;
   width: auto;
   min-height: 354px;
   background: #FFFFFF;
@@ -290,12 +303,163 @@ p {
 }
 
 h3 {
-  position: static;
-  left: 200px;
-  align-items: center;
-  align-content: center;
+  padding: 100px 200px 40px 200px;
+}
+
+.company {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.recentprojects__h3 {
+  padding: 100px 0 20px 0;
+}
+
+.recentprojects__p {
+  width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectscontainer {
+  gap: 60px 20px;
+  margin: 75px auto;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.gold {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 128px;
+  letter-spacing: 1.7px;
+  color: #CDA274;
+}
+
+.quantity__item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 288px;
+  height: 195px;
+  border-right: 1px solid #CDA274;
+}
+
+.quantity__item:last-child {
+  border-right: none;
+}
+
+.quantity {
+  padding: 150px 150px;
+  background: #F4F0EC;
+  border-radius: 0px;
+  width: 1440px;
+  height: 475px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pgold {
   text-align: center;
   justify-content: center;
+}
+
+.blog__item {
+  position: relative;
+  border: 1px solid #E7E7E7;
+  border-radius: 62px;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-shrink: 1;
+}
+
+.blogcontainer {
+  gap: 60px 20px;
+  margin: 75px auto 100px;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.textonimg {
+  padding: 10px 0 0 10px;
+  width: 125px;
+  min-height: 44px;
+  display: flex;
+  flex-grow: 1;
+  background: #FFFFFF;
+  border-radius: 8px 8px 8px 0px;
+  position: absolute;
+  bottom: 180px;
+  left: 44px;
+}
+
+.darkblock {
+  padding: 70px;
+  text-align: center;
   margin: auto;
-  padding: auto;
+  background: #292F36;
+  border-radius: 70px;
+  width: 1200px;
+  height: 414px;
+}
+
+.darkblock > span {
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: 0.22px;
+  color: #FFFFFF;
+}
+
+.darkblock > p {
+  color: #FFFFFF;
+}
+
+.darkblock__button {
+  background: #CDA274;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  max-width: 207px;
+  padding: 20px 0px;
+  color: white;
+  border: 2px solid #292f36;
+  border-radius: 18px;
+  letter-spacing: 0.72px;
+}
+
+.footer {
+  width: 1440px;
+  margin-top: 50px;
+  padding: 50px;
+  border-top: 1px solid #E5E5E5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  border-top: 1px solid #E5E5E5;
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 10px;
 }
